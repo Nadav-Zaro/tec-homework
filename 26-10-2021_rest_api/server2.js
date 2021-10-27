@@ -30,7 +30,6 @@ app.delete("/comments/:id", (req, res) => {
     }
     comments.splice(comment, 1)
     fs.writeFileSync(file, JSON.stringify(comments))
-    fs.readFileSync(file, "utf8")
     res.send("commnet has deleted")
     res.sendStatus(200)
 })
