@@ -1,0 +1,32 @@
+GET http://localhost:8000/todos
+
+###
+
+GET http://localhost:8000/todos/617fa07c892d5c34cc8be11f
+
+###
+
+POST http://localhost:8000/todos
+Content-Type: application/json
+
+{
+    "name":"new async",
+    "age":1,
+    "complete": true
+}
+
+###
+
+DELETE http://localhost:8000/todos/617fa07c892d5c34cc8be11f
+###
+
+PATCH http://localhost:8000/todos/617fa07c892d5c34cc8be11f
+Content-Type: application/json
+
+{
+    "name":"bari a maniak",
+    "age":213,
+    "complete": true
+}
+
+###
