@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = []
+        let number = 1
+        for (let i = 0; i < 1000; i++) {
+            arr.push(number++)
+        }
+        const sqrt = arr.map(Math.sqrt)
+        console.log(sqrt);
+
+        const evenNumbers = (array)=>{
+            enevArr = array.filter(num=> num % 2 == 0)
+            return enevArr
+        }
+        console.log(evenNumbers(arr));
+    </script>
+</body>
+</html>
