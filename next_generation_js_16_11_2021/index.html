@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // module_1 //
+        // היתרון בשימוש במודל הוא סידור הדף בצורה ברורה יותר כי כל הפונקציות מיובאות מדף אחד
+
+        // class_1_m
+        class Student{
+            constructor(name,age,gender){
+                this.name = name
+                this.age = age
+                this.gender = gender
+            }
+            writeStudent (){console.log(this.name,this.age,this.gender)}
+            isYoung(){
+                if (this.age < 18) {
+                return true
+            }
+            return false 
+        }
+        }
+        const student = new Student("nadav",29,"male")
+        const student1 = new Student("young",17,"male")
+        const student2 = new Student("old man",47,"male")
+        const students = [student,student1,student2]
+        student.writeStudent()
+        console.log(student1.isYoung()); 
+        console.log(student2.isYoung()); 
+        students.forEach(element => {
+            console.log(element.isYoung()); 
+        });
+
+    </script>
+</body>
+</html>
