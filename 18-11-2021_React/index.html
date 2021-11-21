@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <main id="app"></main>
+    
+    <script type="text/babel">
+        const domElement = document.getElementById("app")
+        const carObj = {model:"mazda",year:2021}
+        const name = "nadav"
+        // צור קומפוננטה  עם כותרת "hello".
+        function Header() {
+            return <div><h1>Header </h1></div>
+        }
+        function Main() {
+            return <div><h1>Main </h1></div>
+        }
+        function Footer() {
+            return <div><h1>Footer </h1></div>
+        }
+        function Title() {
+            return <div><span>Hello </span>, <ReturnName/></div>
+        }
+        //         צור קומפוננטה שמציגה אובייקט רכב על המסך.
+        // הצג את הרכב 10 פעמים.
+        function Car() {
+            return <p>{carObj.model}, {carObj.year}</p>
+        }
+        function ReturnName() {
+            return <span>{name}</span>
+        }
+        function HelloSomeone(props) {
+            return <p>Hello {props.name}</p>
+        }
+        function GetNameNAge(props) {
+            return <p>{props.name}, {Number(props.age)}</p>
+        }
+        function ShowPic(props) {
+            return <img src={props.img}></img>
+        }
+        function ShowVideo(props) {
+            return <video src={props.video} autoPlay controls></video>
+        }
+
+        ReactDOM.render(
+            <div>
+                <Header/>
+            <Title/>
+            <Main/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <Car/>
+            <ReturnName/>
+            <HelloSomeone name="nadav"/>
+            <HelloSomeone name="uri"/>
+            <HelloSomeone name="ezra"/>
+            <HelloSomeone name="shmuel"/>
+            <HelloSomeone name="bari"/>
+            <HelloSomeone name="yaakov"/>
+            <HelloSomeone name="yosef"/>
+            <HelloSomeone name="erez"/>
+            <HelloSomeone name="adam"/>
+            <HelloSomeone name="roni"/>
+            <GetNameNAge name="nadav" age={29}/>
+            <GetNameNAge name="uri" age={33}/>
+            <GetNameNAge name="ezra" age={28}/>
+            <GetNameNAge name="shmuel" age={28}/>
+            <GetNameNAge name="bari" age={30}/>
+            <GetNameNAge name="yaakov" age={29}/>
+            <GetNameNAge name="yosef" age={29}/>
+            <GetNameNAge name="erez" age={28}/>
+            <GetNameNAge name="adam" age={28}/>
+            <GetNameNAge name="roni" age={28}/>
+            <ShowPic img="https://cdn.pixabay.com/photo/2016/12/26/13/28/taxi-1932107_1280.jpg"/>
+            <ShowPic img="https://cdn.pixabay.com/photo/2021/10/05/14/32/ocean-6682870_1280.jpg"/>
+            <ShowPic img="https://cdn.pixabay.com/photo/2020/02/26/11/19/medicinal-herb-4881474_1280.jpg"/>
+            <ShowVideo video="https://player.vimeo.com/external/580137800.hd.mp4?s=8fe883439ffea5d169638625c305bcb1cb238b1b&profile_id=174"/>
+            <ShowVideo video="https://player.vimeo.com/external/543910236.hd.mp4?s=cad2a678b023d9c54e032e66f1fc9e85787e034e&profile_id=174"/>
+            <ShowVideo video="https://player.vimeo.com/external/514139029.hd.mp4?s=96f4f4ffe082865a48b7f8bbc7f4cd2828a8d239&profile_id=174"/>
+            <Footer/>
+            </div>
+        ,domElement)
+
+        // 10
+        // פרופס הוא אובייקט המעביר מידע מאב לבן.
+
+
+    </script>
+</body>
+</html>
