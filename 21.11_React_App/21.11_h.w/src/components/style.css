@@ -1,0 +1,22 @@
+.blue-square {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin-left: -90%;
+  animation: blueSquare 8s infinite alternate;
+}
+
+@keyframes blueSquare {
+    25% {
+    background-color: red;
+}
+50% {
+    background-color: green;
+    border-radius: 50%;
+  }
+  100% {
+    margin-left: 90%;
+    transform: rotateX(360deg);
+    background-color: yellow;
+  }
+}
