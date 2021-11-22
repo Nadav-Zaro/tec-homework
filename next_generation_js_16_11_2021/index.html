@@ -38,12 +38,7 @@
                 this.gender = gender
             }
             writeStudent (){console.log(this.name,this.age,this.gender)}
-            isYoung(){
-                if (this.age < 18) {
-                return true
-            }
-            return false 
-        }
+            isYoung(){return this.age < 18}
         }
         const student = new Student("nadav",29,"male")
         const student1 = new Student("young",17,"male")
@@ -52,8 +47,8 @@
         student.writeStudent()
         console.log(student1.isYoung()); 
         console.log(student2.isYoung()); 
-        students.forEach(element => {
-            console.log(element.isYoung()); 
+        students.forEach(student => {
+            console.log(student.isYoung()); 
         });
 
     </script>
