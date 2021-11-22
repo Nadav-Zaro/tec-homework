@@ -1,6 +1,6 @@
 
 import './App.css';
-import  {Counter, LongText, SetCounter, ShowHide, TwoCounters } from './counter';
+import  {Counter, LongText, SetCounter, ShowHide, TwoCounters } from './AllComponent';
 
 function App() {
   return (
