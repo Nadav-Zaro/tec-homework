@@ -31,8 +31,8 @@ class OpenWeather extends Component{
             <div className="weather">
             <h1 className="header">What's The Weather?</h1>
             <p className="text">Enter the name of a city.</p>
-            <input className="input" type="text" onChange={this.chooseCity} placeholder="Enter city name"></input>
-            <button className="btn" type="submit" onClick={this.sendWeather}>Submit</button>
+            <input className="input2" type="text" onChange={this.chooseCity} placeholder="Enter city name"></input>
+            <button className="btn2" type="submit" onClick={this.sendWeather}>Submit</button>
             <div className="goodCity" style={goodCityP}>
             <p>The weather right now is {parseInt(temp)}&#8451;. The max temp for today may be<br></br>
             {parseInt(temp_max)}&#8451;, the min temp might be {parseInt(temp_min)}&#8451;</p>
