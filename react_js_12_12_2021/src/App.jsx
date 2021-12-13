@@ -35,7 +35,7 @@ function App() {
       </Switch>
       <div className='footer'>
         <div className='footerLinks'>
-          <a href="https://github.com/Nadav-Zaro"><img className='footerImg' src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/></a>
+          <a href="https://github.com/Nadav-Zaro"><img className='footerImg' src="https://img.icons8.com/ios-glyphs/30/4a90e2/github.png"/></a>
           <a href="https://www.linkedin.com/in/nadav-zaro-6b979321a/"><img className='footerImg' src="https://img.icons8.com/fluency/64/000000/linkedin.png"/></a>
           <a href="https://www.youtube.com/watch?v=jI-w4gvkCkQ&list=RDjI-w4gvkCkQ&start_radio=1"><img className='footerImg' src="https://img.icons8.com/fluency/48/000000/youtube-play.png"/></a>
           <a href="https://www.udemy.com/user/nathan-krasney/"><img className='footerImg' src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/24/000000/external-udemycom-is-an-online-learning-and-teaching-platform-logo-shadow-tal-revivo.png"/></a>
@@ -47,4 +47,5 @@ function App() {
   );
 }
 
+<img src="https://img.icons8.com/ios-glyphs/30/4a90e2/github.png"/>
 export default App;

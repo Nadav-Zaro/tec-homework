@@ -1,0 +1,22 @@
+.tableContainer{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.books{
+    border: 1.5px solid black;
+}
+
+.table{
+    border: 1.5px solid black;
+    width: 70%;
+}
+.details{
+    text-align: center;
+    border: 2.5px solid black;
+    padding: 10px;
+    border-radius: 9px;
+}

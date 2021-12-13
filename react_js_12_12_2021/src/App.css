@@ -12,10 +12,11 @@
 }
 
 .title{
- font-size: 35px;
+ font-size: 40px;
  font-weight: 400;
  margin-left: 1%;
  color: white;
+ letter-spacing: 1.5px;
 }
 
 .LinksHolder{
@@ -28,18 +29,18 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
+  border-bottom: 2.2px solid rgba(0, 0, 0, 0.932);
+  transition: .4s;
 }
 
-.Link{
-  transition: all .5s;
-}
-
-.Link:hover{
+.LinksHolder a:hover{
   border-bottom: 2.2px solid red;
 }
 
 .footer{
-  margin-top: 35%;
+  margin-top: 38%;
+  background-color: black;
+  color: white;
 }
 
 .footerImg{
