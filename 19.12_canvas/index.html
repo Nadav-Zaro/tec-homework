@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas")
+        canvas.height = innerHeight
+        canvas.width = innerWidth
+        const context = canvas.getContext("2d")
+        // context.fillStyle = "black"
+        // context.fillRect(0,0,50,50)
+        // context.fillStyle = "red"
+        // context.fillRect(30,30,70,70)
+        // context.fillStyle = "red"
+        // context.strokeStyle = "blue"
+        // context.beginPath()
+        // context.arc(100, 100, 30,0,360)
+        // context.closePath()
+        // context.fill()
+        // context.stroke()
+        // context.fillStyle = "blue"
+        // context.beginPath()
+        // context.arc(140, 140, 50,0,360)
+        // context.closePath()
+        // context.fill()
+        // context.fillStyle = "green"
+        // context.beginPath()
+        // context.arc(200,250,40,0,360)
+        // context.arc(400,250,40,0,360)
+        // context.closePath()
+        // context.fill()
+
+        // // let x = 0 
+        // // const threeSquers = setInterval(() => {
+        // //     context.clearRect(x,320,50,50)
+        // //     context.clearRect(x,400,50,50)
+        // //     context.clearRect(x,480,50,50)
+        // //     x += 20
+        // //     context.fillStyle = "black"
+        // //     context.fillRect(x,320,50,50)
+        // //     context.fillStyle = "blue"
+        // //     context.fillRect(x,400,50,50)
+        // //     context.fillStyle = "green"
+        // //     context.fillRect(x,480,50,50)
+        // //     if (x > canvas.width - 120) {
+        // //         clearInterval(threeSquers)
+        // //     }
+        // // }, 500);
+
+        // const floor = {
+        //     x : 0,
+        //     y : 560,
+        //     width : canvas.width,
+        //     height: 50
+        // };
+
+        // context.fillStyle = "black"
+        // context.fillRect(floor.x,floor.y,floor.width,floor.height)
+
+        // let player = {
+        //     x : canvas.width /2,
+        //     y : 490,
+        //     width : 70,
+        //     height: 70
+        // }
+
+        // context.fillStyle = "green"
+        // context.fillRect(player.x,player.y,player.width,player.height)
+
+        // const jump = ()=>{[]
+        //     let y = player.y 
+        //     const up = setInterval(() => {
+        //         context.clearRect(player.x,y,player.width,player.height)
+        //         y = y - 10 
+        //         context.fillStyle = "green"
+        //         context.fillRect(player.x,y,player.width,player.height)
+        //         if (y == 480) {
+        //             clearInterval(up)
+        //             setTimeout(() => { 
+        //                 context.clearRect(player.x,y,player.width,player.height)
+        //                 context.fillStyle = "green"
+        //                 context.fillRect(player.x,player.y,player.width,player.height)
+        //             }, 400);
+        //         }
+        //     }, 400);
+        // }
+
+        // document.addEventListener("keyup",jump)
+
+        // for (let i = 0; i < 10; i++) {
+        //     let squers = {
+        //         x:  Math.floor(Math.random() * canvas.width) - 10,
+        //         y:  Math.floor(Math.random() * canvas.height) - 10,
+        //         height: 50,
+        //         width: 50
+        //     } 
+        //     context.fillStyle = "black"
+        //     context.fillRect(squers.x,squers.y,squers.width,squers.height)
+        // }
+        // for (let i = 0; i < 10; i++) {
+        //     let circle = {
+        //         x:  Math.floor(Math.random() * canvas.width) - 50,
+        //         y:  Math.floor(Math.random() * canvas.height) - 50,
+        //         radius:  Math.random() * 70,
+        //         strAngle: 0,
+        //         endAngle: 360,
+        //     } 
+        //     context.fillStyle = "blue"
+        //     context.beginPath()
+        //     context.arc(circle.x,circle.y,circle.radius,circle.strAngle,circle.endAngle)
+        //     context.closePath()
+        //     context.fill()
+            
+        // }
+        // let colorArr = ["yellow","black","green","gold","grey","purple","blue"]
+        // for (let i = 0; i < 10; i++) {
+        //     let squers = {
+        //         x:  Math.floor(Math.random() * canvas.width) - 10,
+        //         y:  Math.floor(Math.random() * canvas.height) - 10,
+        //         height: 50,
+        //         width: 50
+        //     } 
+        //     context.fillStyle = colorArr[Math.floor(Math.random() * 7)]
+        //     context.fillRect(squers.x,squers.y,squers.width,squers.height)
+        // }
+
+        context.btrokeStyle = "black";
+        context.fillStyle = "yellow";
+        context.lineWidth = "2";
+        context.beginPath()
+        context.arc(canvas.width / 2 ,canvas.height / 2 , 100  , 0 , 360)
+        context.closePath()
+        context.fill()
+        context.stroke()
+
+        context.fillStyle = "black";
+        context.lineWidth = "1";
+        context.beginPath()
+        context.arc(canvas.width / 2.15 ,canvas.height / 2.2 , 7  , 0 , 360)
+        context.closePath()
+        context.fill()
+
+        context.fillStyle = "black";
+        context.beginPath()
+        context.arc(canvas.width / 1.88 ,canvas.height / 2.2 , 7  , 0 , 360)
+        context.closePath()
+        context.fill()
+
+        context.btrokeStyle = "black"
+        // context.fillStyle = "white";
+        context.lineWidth = "3";
+        context.beginPath()
+        context.arc(canvas.width / 2 ,canvas.height / 1.97 , 60  , 0 , Math.PI,false)
+        // context.closePath()
+        // context.fill()
+        context.stroke()
+
+    </script>
+</body>
+</html>
