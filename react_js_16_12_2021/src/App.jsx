@@ -4,17 +4,12 @@ import { useState } from 'react';
 import Unmount from './components.jsx/Unmount';
 
 function App() {
-  // const [input, setInput] = useState("")
+  const [input, setInput] = useState("reactjs")
   return (
     <div className="App">
-      {/* <form onSubmit={()=>{
-        console.log(input);
-      }}>
       <input type="text" onChange={(e)=>setInput(e.target.value)}/> 
-      <button type="submit">get</button>
-      </form>
-      <Reddit subject={input}/> */}
-      <Unmount/>
+      <Reddit subject={input}/>
+      {/* <Unmount/> */}
     </div>
   );
 }
