@@ -1,11 +1,11 @@
 import {useEffect,useState} from 'react'
 
-export default function Counter({countStr}) {
-    const [counter, setCounter] = useState(0)
+export default function Counter({initialCounter}) {
+    const [counter, setCounter] = useState(initialCounter)
 
     useEffect(() => {
-        setCounter(Number(countStr))
-    }, [countStr])
+        setCounter(initialCounter)
+    }, [initialCounter])
     return (
         <div>
             <button onClick={()=>{

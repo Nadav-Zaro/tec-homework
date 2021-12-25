@@ -7,15 +7,15 @@ import Counter from './components/Counter';
 import TitleDate from './components/TitleDate';
 
 function App() {
-  const [countStr, setCountStr] = useState(null)
+  const [initialCounter, setInitialCounter] = useState(null)
   return (
     <div className="App">
-      <input type="number" onChange={(e)=>setCountStr(e.target.value)}/>
+      <input type="number" onChange={(e)=>setInitialCounter(Number(e.target.value))}/>
     {/* <ShowClicks /> */}
     {/* <ShowClicksClass/> */}
     {/* <ShowClicksHooks/> */}
-    {/* <Counter countStr={countStr}/>  */}
-    <TitleDate/>
+    <Counter initialCounter={initialCounter}/> 
+    {/* <TitleDate/> */}
     </div>
   );
 }
