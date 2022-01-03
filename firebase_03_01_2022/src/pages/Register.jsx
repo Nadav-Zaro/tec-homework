@@ -1,19 +1,20 @@
 import axios from 'axios'
-import {useRef} from 'react'
+import {useRef,useState} from 'react'
 import { Redirect } from 'react-router-dom'
+import API_KEY from '../apiKey/ApiKey'
 
 export default function Register({setAuth}) {
+    const [isErrorFromServer, setisErrorFromServer] = useState(false)
     const emailRef = useRef("")
     const passwordRef = useRef("")
-    const API_KEY = "AIzaSyB9ZE7huME3XeOxBfweIoJ1_iVb5zsnXdY"
     function register() {
         axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
         {email:emailRef.current.value,password:passwordRef.current.value})
         .then(res=>{
             setAuth(res.data)
-            console.log(res);
         })
         .catch(err=>{
+            setisErrorFromServer(err)
             console.log(err);
         })
     }
@@ -28,6 +29,7 @@ export default function Register({setAuth}) {
                 <input ref={passwordRef} type="password" placeholder='password'/><br/>
                 <button type="submit" onClick={()=><Redirect to="/Authenticated"/>}>Register</button>
             </form>
+            {isErrorFromServer ? <p style={{color:"red"}}>ERROR</p> : ""}
         </div>
     )
 }

@@ -1,19 +1,20 @@
-import {useRef} from 'react'
+import {useRef,useState} from 'react'
 import axios from 'axios'
 import { Redirect } from 'react-router-dom'
+import API_KEY from '../apiKey/ApiKey'
 
 export default function Login({setAuth,auth}) {
     const emailRef = useRef("")
     const passwordRef = useRef("")
-    const API_KEY = "AIzaSyB9ZE7huME3XeOxBfweIoJ1_iVb5zsnXdY"
+    const [isErrorFromServer, setisErrorFromServer] = useState(false)
     function login() {
         axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`,
         {email:emailRef.current.value, password:passwordRef.current.value})
         .then(res=>{
             setAuth(res.data)
-            console.log(res);
         })
         .catch(err=>{
+            setisErrorFromServer(err)
             console.log(err);
         })
     }
@@ -31,6 +32,7 @@ export default function Login({setAuth,auth}) {
                 <input ref={passwordRef} type="password" placeholder='password'/><br/>
                 <button type="submit">Login</button>
             </form>
+            {isErrorFromServer ? <p style={{color:"red"}}>ERROR</p> : ""}
         </div>
     )
 }

@@ -16,15 +16,15 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Link to="/">Home</Link>
-      {auth ? "" : <Link to="/Register">Register</Link>}
-      {auth ? "" : <Link to="/Login">Login</Link>}
-      {auth != null ? <Link to="/Authenticated">Authenticated</Link> : "" }
+      <Link className='links' to="/">Home</Link>
+      {auth ? "" : <Link className='links' to="/Register">Register</Link>}
+      {auth ? "" : <Link className='links' to="/Login">Login</Link>}
+      {auth?  <Link className='links' to="/Authenticated">Authenticated</Link> : ""  }
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={()=><Home setAuth={setAuth} auth={auth}/>} />
         {auth ? "" : <Route exact path="/Register" render={()=><Register setAuth={setAuth} auth={auth}/>}/>}
         {auth ? "" : <Route exact path="/Login" render={()=><Login setAuth={setAuth}/>} auth={auth}/>}
-        {auth != null ? <Route exact path="/Authenticated" render={()=><Authenticated auth={auth}/>}/> : ""}
+        {auth ? <Route exact path="/Authenticated" render={()=><Authenticated setAuth={setAuth} auth={auth}/>}/> :"" }
       </Switch>
     </div>
     </BrowserRouter>
